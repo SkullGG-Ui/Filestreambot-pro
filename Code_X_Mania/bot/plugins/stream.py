@@ -18,7 +18,7 @@ pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "jv_passwords")
 
 
-@StreamBot.on_message((filters.regex("login🔑") | filters.command("login")) & ~filters.edited, group=4)
+@StreamBot.on_message((filters.regex("Login🔑") | filters.command("login")) & ~filters.edited, group=4)
 async def login_handler(c: Client, m: Message):
     try:
         try:
@@ -87,7 +87,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** @adarshgoelz",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ**",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -155,7 +155,7 @@ async def private_receive_handler(c: Client, m: Message):
 async def channel_receive_handler(bot, broadcast):
     check_pass = await pass_db.get_user_pass(broadcast.chat.id)
     if check_pass == None:
-        await broadcast.reply_text("Login first using /login cmd \n don\'t know the pass? request it from @adarshgoelz")
+        await broadcast.reply_text("Login first using /login cmd \n don\'t know the pass? request it @Chamzz75")
         return
     if check_pass != MY_PASS:
         await broadcast.reply_text("Wrong password, login again")
