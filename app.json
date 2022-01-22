@@ -1,5 +1,5 @@
 {
-  "name": "Adarsh-FileStreamBot",
+  "name": "Skull-FileStreamBot",
   "description": "A Pyrogram Telegram bot to Stream Telegram files to web. @adarshgoel",
   "keywords": [
       "telegram",
@@ -13,10 +13,10 @@
       "media",
       "bot"
     ],
-  "repository": "https://github.com/code-x-mania/FileStreamBot-pro/",
+  "repository": "https://github.com/SkullGG-Ui/FilestreambotX/",
   "success_url": "/",
-  "logo": "https://i.ibb.co/MnMZ1Sy/download-1.jpg",
-  "website": "http://adarsh.eu.org",
+  "logo": "https://i.ibb.co/VVhWYt4/Skull-Bots.png",
+  "website": "#",
   "env": {
       "ENV": {
           "description": "Set this to True if you don't want to crash the bot",
