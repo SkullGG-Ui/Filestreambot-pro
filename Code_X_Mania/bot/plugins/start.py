@@ -216,7 +216,7 @@ Send me any file and get a direct download link and streamable link.!""",
         )
 
 
-@StreamBot.on_message(filters.regex('help📚') & filters.private & ~filters.edited)
+@StreamBot.on_message(filters.regex('Help📚') & filters.private & ~filters.edited)
 async def help_handler(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
