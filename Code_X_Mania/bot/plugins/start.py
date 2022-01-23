@@ -190,9 +190,10 @@ Send me any file and get a direct download link and streamable link.!""",
         elif get_msg.photo:
             file_name=f"{get_msg.photo.file_name}"
 
-        stream_link = Var.URL + 'watch/' + str(log_msg.message_id) 
+        link_name= file_name.replace(" " , "_")
+        stream_link = Var.URL + 'watch/' + str(link_name)
         
-        online_link = Var.URL + 'download/' + str(log_msg.message_id) 
+        online_link = Var.URL + 'download/' + str(link_name)
        
 
         msg_text ="""
